@@ -1,0 +1,277 @@
+.main {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.query-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ffd500;
+}
+
+.header-text {
+    text-align: center;
+    color: #ffc105;
+    margin-bottom: -10px;
+    margin-top: 0px;
+    font-size: 40px;
+}
+
+.query-container {
+    display: inline-block;
+    justify-content: center;
+}
+
+.query-container form {
+    display: block;
+}
+
+.main-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.info-photo {
+    display: inline-block;
+    width: 220px;
+    height: 200px;
+    background-color: #000000;
+    color: #fff;
+    margin-inline: 20px;
+    border: 3px solid #ffd500;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.info-photo #imageInput {
+    opacity: 0%;
+    width: 220px;
+    height: 200px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.info-photo .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 220px;
+    margin-top: 0px;
+    max-height: 200px;
+    height: 100%;
+    color: #333;
+}
+
+
+.info-photo .image-container img {
+    position:relative;
+    top: -200px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    display: none; /* Сначала изображение скрыто */
+}
+
+
+
+
+.info-text {
+    display: inline-block;
+    width: 500px;
+    height: 200px;
+    background-color: #000000;
+    color: #fff;
+    margin-inline: 0px;
+
+}
+
+.info-text .block_1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между блоками */
+    align-items: center; /* Выравнивание по вертикали */
+    margin-top: -10px;
+}
+
+
+.price-app,
+.title-app {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-app label,
+.title-app label {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.title-app input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 250px;
+}
+
+.price-app input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 150px;
+}
+
+
+
+
+
+.info-text .block_2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между блоками */
+    align-items: center; /* Выравнивание по вертикали */
+    margin-top: 20px;
+}
+
+.metro-app,
+.address-app {
+    display: flex;
+    flex-direction: column;
+}
+
+.metro-app label,
+.address-app label {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.address-app input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 250px;
+}
+
+.metro-app input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 150px;
+}
+
+.info-text .block_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.phone-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.phone-info label {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    line-height: 1;
+    position: relative;
+    bottom: -5px;
+}
+
+.phone-info input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 350px;
+}
+
+
+.description {
+    background-color: #000000;
+    color: #fff;
+    width: 750px;
+    height: 180px;
+    margin-inline: 100px;
+    margin-top: 10px;
+}
+
+.description label {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+#description {
+    width: 729px; /* Установите нужную ширину */
+    height: 50px; /* Установите нужную высоту */
+    padding: 10px; /* Пространство внутри поля для текста */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 729px;
+    max-width: 729px;
+    min-height: 50px;
+    max-height: 140px;
+}
+
+
+
+form button {
+    margin-top: 20px;
+    margin-inline: 38%;
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+

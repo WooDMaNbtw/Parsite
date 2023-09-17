@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/account/style_account.css">
+    <title>Account</title>
+</head>
+<body>
+    <header class="header">
+        <ul>
+            <li class="option"><a href="/create"><div class="link">Create</div></a></li>
+            <li class="option"><a href="/"><div class="link">Catalog</div></a></li>
+            <li class="option"><a href="/query"><div class="link">Query</div></a></li>
+            <li class="option"><a href="/favorite"><div class="link">Favorite</div></a></li>
+            <li class="option"><a href="/contacts"><div class="link">Contacts</div></a></li>
+        </ul>
+    </header>
+    <main class="main">
+        <section>
+<!--            <div class="head head-1">User info</div>-->
+            <div class="main-info">
+                <table class="box-1">
+                    <tbody>
+                        <tr class="show-info">
+                            <td class="info">Fullname:</td>
+                            <td class="info">{{ DATA_USER[0].name }} {{ DATA_USER[0].surname }}</td>
+                        </tr>
+                        <tr class="show-info">
+                            <td class="info">Username:</td>
+                            <td class="info">{{ DATA_USER[0].login }}</td>
+                        </tr>
+                        <tr class="show-info">
+                            <td class="info">Email:</td>
+                            <td class="info">{{ DATA_USER[0].mail }}</td>
+                        </tr>
+                        <tr class="show-info">
+                            <td class="info">Date of birth:</td>
+                            <td class="info">{{ DATA_USER[0].birth }}</td>
+                        </tr>
+                        <tr class="show-cat">
+                            <td class="href-logout">
+                                <a href="{{ url_for('logout') }}"><span>Logout</span></a>
+                            </td>
+                            <td class="change-data-td">
+                                <a href="" class="login-register" id="open-login">Change data</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+<!--        <div class="head head-2">User info</div>-->
+        <section>
+            <div class="main-info">
+                <table class="box-2">
+                    <tbody>
+                        <tr>
+                            <td class="info-parsite">Total parsite items:</td>
+                            <td>{{ DATA_CATALOG }}</td>
+                        </tr>
+                        <tr>
+                            <td class="info-parsite">Total query items:</td>
+                            <td>{{ DATA_SUM }}</td>
+                        </tr>
+                        <tr>
+                            <td class="info-parsite">Total <b>Avito</b> items:</td>
+                            <td>{{ TOTAl_AVITO }}</td>
+                        </tr>
+                        <tr>
+                            <td class="info-parsite">Total <b>Domclick</b> items:</td>
+                            <td>{{ TOTAL_DOMCLICK }}</td>
+                        </tr>
+                        <tr>
+                            <td class="info-parsite">Total <b>Cian</b> items:</td>
+                            <td>{{ TOTAl_CIAN }}</td>
+                        </tr>
+                        <tr>
+                            <td class="info-parsite">Favorites: </td>
+                            <td>{{ DATA_FAVORITES }}</td>
+                        </tr>
+                        <tr>
+                            <td class="info-parsite">Created: </td>
+                            <td>{{ USER_CREATED }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="popup-bg" id="popup-bg">
+          <div class="popup" id="popup">
+            <form action="/account" onsubmit="return check_submit_form()" method="post">
+            <img class="close-popup" id="close-login" src="/static/img/close_page.svg" alt="icon">
+            <h2>Change personal data</h2>
+                <div class="tbody">
+                    <div class="tr">
+                        <div class="show-cat">Firstname: </div>
+                        <div><input type="text" placeholder="{{ DATA_USER[0].name }}" name="firstname"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="show-cat">Secondname: </div>
+                        <div><input type="text" placeholder="{{ DATA_USER[0].surname }}" name="secondname"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="show-cat">Username: </div>
+                        <div><input type="text" minlength="6" maxlength="30" placeholder="{{ DATA_USER[0].login }}" name="login"></div>
+                    </div>
+                    <div class="tr">
+                        <div id="warning" class="show-cat">Email: </div>
+                        <div><input type="text" placeholder="{{ DATA_USER[0].mail }}" id="email" name="email"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="show-cat">Date of birth: </div>
+                        <div><input type="date" placeholder="{{ DATA_USER[0].birth }}" name="date"></div>
+                    </div>
+                    <button class="button" id="submit_btn">Confirm</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </main>
+    <script src="/static/account/main_account.js"></script>
+    <script src="/static/account/main_account_2.js"></script>
+</body>
+</html>

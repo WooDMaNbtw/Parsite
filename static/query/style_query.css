@@ -1,0 +1,292 @@
+.query-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.main h2,
+.main h3{
+    display:flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.main h2 {
+    font-size: 35px;
+}
+
+.main h3 {
+    font-size: 20px;
+}
+
+.main-option {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    height: 50px;
+    font-size: 20px;
+}
+
+.title-search {
+    width: 500px;
+    background-color: #333;
+    border-radius: 15px;
+    color: #fff;
+    border: 3px solid #ffd500;
+}
+
+.title-button {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    background-color: #333;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: .3s;
+}
+
+.title-button div {
+    opacity: 0.2;
+    width: 100%;
+}
+
+.title-button img {
+    margin-top: -2px;
+    align-items: center;
+    max-width: 46px;
+}
+.title-button div:hover{
+    opacity: 1;
+}
+
+.title-button:hover{
+    transform: scale(1.05);
+    border: 3px solid #ffd500;
+}
+
+
+
+
+.extra-option{
+    margin-top: 30px;
+    display: block;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.extra-option .search-price{
+    display: block;
+    width: 47%;
+    color: #fff;
+    margin-right: 6%;
+}
+
+.extra-option .search-metro{
+    display: inline-block;
+    margin: 0 auto;
+    width: 47%;
+}
+
+.search-price .input-price {
+    display: flex;
+    justify-content: center;
+}
+
+.extra-option .search-price h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.extra-option .row .input-price .price {
+    height: 40px;
+    font-size: 20px;
+    width: 50%;
+}
+
+.extra-option .row .input-price .min-price {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.extra-option .row .input-price .max-price {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.extra-option .search-metro .input-metro {
+    display: flex;
+    justify-content: center;
+}
+.extra-option .search-metro h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.extra-option .search-metro .input-metro .metro {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+.select-websites {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.select-websites .group {
+    display: flex;
+    justify-content: center;
+    line-height: 3;
+    font-size: 25px;
+    width: 100%;
+}
+
+
+.select-websites .group .box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+}
+
+.box {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: 250px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  background-color: #363636;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  margin: 0px auto;
+  font-size: 28px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper img {
+    margin: 0px auto;
+    position: relative;
+    bottom: -12px;
+    max-width: 45px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Multiple Checkboxes can be chained together for a radio input */
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 10px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.box-1 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #756601;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.box-1 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #adab02;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.box-2 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #116e01;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.box-2 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #00a310;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+
+.box-3 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #013a73;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.box-3 .customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #0252a3;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+
+

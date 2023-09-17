@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Catalog
+{% endblock %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="/static/index/index.css">
+{% endblock %}
+
+
+{% block info %}
+    <div class="data fullname">{{ DATA_USER[0].name }} {{ DATA_USER[0].surname }}</div>
+    <div class="data login">Login: {{ DATA_USER[0].login }}</div>
+    <div class="data mail">Email: {{ DATA_USER[0].mail }}</div>
+{% endblock %}
+
+{% block main %}
+        <div class="main-container">
+            <div class="items">
+                {% for item in DATA_INFO %}
+                <div class="item">
+                    <table class="table-photo">
+                        <tr class="data-row">
+                            <td class="image"><img src="/static/uploads/{{ item.images }}" alt="Фото"></td>
+                        </tr>
+                    </table>
+                    <table class="table-text">
+                        <tr class="main-block">
+                            <td class="title">{{ item.title }}</td>
+                        </tr>
+                        <tr class="main-block">
+                            <td class="price">Price: {{ item.price }}₽</td>
+                        </tr>
+                        <tr class="main-block">
+                            <td class="address">{{ item.address }}</td>
+                        </tr>
+                        <tr class="main-block">
+                            <td class="metro">Metro station: {{ item.metro }}</td>
+                        </tr>
+                        <tr class="main-block">
+                            <td class="description">{{ item.description }}</td>
+                        </tr>
+                        <tr class="main-block">
+                            <td class="link">Phone: {{ item.phone }}</td>
+                        </tr>
+                    </table>
+                    <div class="favorite">
+                            <form method="POST" action="/add_to_favorites">
+                                <label class="heart-checkbox">
+                                    <span class="span-fav">&#10084;<button type="submit" id="fav" name="fav" value="{{ item.id }}"></button></span>
+                                </label>
+                            </form>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <script src="/static/index/main_index.js"></script>
+{% endblock %}

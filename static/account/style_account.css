@@ -1,0 +1,471 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.header {
+    display: flex;
+    background-color: #333; /* Цвет фона шапки */
+    justify-content: center;
+    width: 100%;
+    height: 9%;
+    border-bottom: 7.5px solid #ffd500;
+}
+
+.header ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Это свойство делает элементы горизонтальными */
+    justify-content: center;
+}
+
+.header li {
+    margin-inline: 100px; /* Расстояние между элементами меню */
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff; /* Цвет ссылок в меню */
+    font-size: 30px;
+
+}
+
+.header a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.header .link {
+    transition: .3s;
+}
+
+.header a:hover .link {
+    transform: scale(1.1);
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    justify-content: center;
+    background: #333;
+}
+
+.main section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+/*
+.head-1 {
+    position: relative;
+    display: flex;
+    right: -400px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.head-2 {
+    width: 200px;
+    height: 50px;
+    background: red;
+    position: relative;
+    display: flex;
+    right: -400px;
+    font-size: 30px;
+    color: #fff;
+}
+*/
+
+.box-1 {
+    position: relative;
+    right: -50px;
+    border: 5px solid #ffd500;
+    top: -5px;
+
+}
+
+.box-2 {
+    position: relative;
+    left: -50px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20%;
+    margin-right: 0px;
+
+}
+
+fieldset{
+    border: none;
+    margin-top: 5%;
+}
+
+
+.change {
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+
+table, th, td {
+    border: 3px solid #ffd500; /* Границы таблицы и ячеек */
+}
+
+.show-cat {
+    background-color: #333;
+    color: #fff;
+}
+
+.show-cat td{
+    text-align: left;
+    padding: 11px;
+    padding-left: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+.show-info td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 50px;
+    color: #fff;
+    background-color: #333;
+}
+
+.show-info {
+    justify-content: center;
+}
+
+.info {
+    text-align: left;
+    font-size: 30px;
+}
+
+.change {
+    text-align: right;
+}
+
+
+.href-logout a{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+.href-logout a:hover{
+    color: #1682f5;
+    text-decoration: underline;
+}
+
+
+.box-2 {
+    display: flex;
+    margin-top: 30%;
+}
+
+/* Стили для заголовка "Parsite info" */
+.head-2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Стили для таблицы */
+.box-2 table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.box-2 tr {
+    padding: 0px;
+    height: 20px;
+}
+
+/* Стили для ячеек таблицы */
+.box-2 .info-parsite {
+    height: 0px;
+    width: 250px;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.box-2 td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+    color: #fff;
+}
+
+
+/* Стили для жирного текста внутри ячеек */
+.box-2 td b {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+}
+/* ------------------------------------ */
+
+body .popup-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .9);
+  visibility: hidden;
+  opacity: 0;
+}
+
+body .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 550px;
+  background-color: #333;
+  border: 3px solid #ffd500;
+  transform: translate(-50%, -50%);
+  padding-top: 60px;
+  border-radius: 25px;
+}
+
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 50px;
+  cursor: pointer;
+}
+
+body .popup-bg form {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 25px;
+  color: #fff
+
+}
+
+body .popup-bg form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -40px;
+  font-size: 30px;
+  color: #fff;
+}
+
+body .popup-bg form label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  left: -175px;
+}
+
+
+body .popup-bg form input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 0;
+  border-bottom: 1px solid #ffd500;
+  border-radius: 4px;
+  font-size: 22px;
+  background-color: #333;
+  color: #fff;
+}
+
+
+body .popup-bg form .password a img {
+  position: relative;
+  max-width: 40px;
+  right: -210px;
+  top: -55px;
+  cursor: pointer;
+}
+
+body .popup-bg form .password a {
+  transition: 0.1s;
+  opacity: 0.4;
+}
+
+body .popup-bg form .password a.active {
+  transition: 0.1s;
+  opacity: 1;
+}
+
+
+
+body .popup-bg form .enter{
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  margin: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #000000;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: 0.6s;
+  right: -35%;
+  background-color: #fff;
+}
+
+
+body .popup-bg form .enter:hover{
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  color: rgb(0, 106, 41);
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-7px);
+  transform: scale(1.05);
+}
+
+body .popup-bg form .forgot-password {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  margin: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #000000;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: 0.6s;
+  bottom: -44px;
+  right: 0px;
+  background-color: #fff;
+}
+
+
+body .popup-bg form .forgot-password:hover{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+  color: rgb(21, 0, 255);
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-7px);
+  transform: scale(1.02);
+}
+
+
+.change-data-td .login-register{
+    position: relative;
+    margin-left: 240px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    transition: .3s;
+}
+
+.login-register:hover {
+    color: #1682f5;
+    text-decoration: underline;
+}
+
+body .popup-bg form .register {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  margin: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #000000;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: 0.6s;
+  bottom: 0px;
+  right: -55%;
+  background-color: #fff;
+}
+
+
+
+body .popup-bg form .register:hover{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+  color: rgb(255, 111, 111);
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-7px);
+  transform: scale(1.02);
+}
+
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  width: 220px;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  margin: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: 0.5s;
+  bottom: -2px;
+  right: -110px;
+  background-color: #000000;
+}
+
+.button:hover{
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  color: #34eb4c;
+  background-color: #000000;
+  transform: translateY(-7px);
+  transform: scale(1.1);
+}
+
+

@@ -1,0 +1,176 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+*,
+*::before
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;  /*#1c1c1c*/
+    height: 100vh;
+}
+
+
+aside {
+    position: fixed;
+    display: inline-block;
+    background: #333333;
+    width: 20%;
+    padding: 0%;
+    height: 100vh;
+    color: #fff;
+    border-right: 10px solid #ffd500;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+aside h1 {
+    padding: 2%;
+    position: relative;
+    right: -90px;
+
+}
+
+
+aside ul .option {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+aside ul .photo img{
+    position: relative;
+    max-width: 100%;
+
+}
+
+aside ul .kontakt {
+    margin: 30px 0 30px 0px;
+    height: 220px;
+
+}
+
+aside ul .kontakt .info {
+    display: flex; /* Применяем flexbox для центрирования */
+    justify-content: center; /* Выравниваем элементы по горизонтали */
+    align-items: center;
+    margin-inline: 40px;
+    height: 80%;
+    border: 5px solid #fff;
+    font-size: 14px;
+}
+
+aside ul li a {
+    font-size: 25px;
+}
+
+
+/*@media (min-width: 1024px;){
+    aside {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+}*/
+
+
+
+body header {
+    position: fixed;
+    display: inline-block;
+    background-color: #000000;
+    width: 80%;
+    padding: 0%;
+    height: 10%;
+    color: #fff;
+    right: -10px;
+    top: 0px;
+}
+
+body header .header {
+    position: fixed;
+    display: inline-block;
+    background-color: #000000;
+    width: 80%;
+    padding: 0%;
+    height: 10%;
+    color: #fff;
+    right: -10px;
+    top: 0px;
+}
+
+
+body header .header .info-option{
+    display: inline-block;
+    height: 100%;
+    justify-content: center;
+}
+
+body header .header .user-info {
+    position: relative;
+    top: 0px;
+    width: 25%;
+    background-color: #333;
+}
+
+body header .header .more-info {
+    position: relative;
+    top: 0px;
+    width: 50%;
+    background-color: #333;
+    margin-inline: 12px;
+}
+
+body header .header .authentication {
+    width: 22%;
+    background-color: #333;
+    position: relative;
+    top: -45px;
+}
+
+
+body header .header .authentication a {
+  line-height: 30px;
+  margin: 10px;
+  position: relative;
+  bottom: -14px;
+  right: -40px;
+  font-size: 28px;
+}
+
+.vertical-line {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 30px;
+  border-left: 3px solid white;
+  margin: 0 auto;
+  transform: rotate(25deg);
+  right: -40px;
+  bottom: -22px;
+}
+
+
+
+main {
+    display: inline-block;
+    width: 1206px;
+    margin: 66px 0 0 305px;
+    background-color: red;
+}
+
+
+
+

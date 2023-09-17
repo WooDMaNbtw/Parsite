@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" >
+    <link href="/static/register/style_register.css" rel="stylesheet">
+
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="{{ url_for('register') }}" onsubmit="return check_submit_form()" method="post">
+
+            <div class="form-option fullname">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="username" required>
+            </div>
+
+            <div class="form-option fullname surname">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="usersurname" required>
+            </div>
+
+            <div class="form-option email">
+                <label for="email" id="warning">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-option login">
+                <label for="login">Login for authorization:</label>
+                <input type="text" id="login" name="login" minlength="6" maxlength="30" required>
+            </div>
+
+            <div class="form-option password">
+                <label for="password" id="pass-str">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" maxlength="30" required>
+            </div>
+
+            <div class="form-option password confirmation">
+                <label for="password" id="conf-str">Confirm password:</label>
+                <input type="password" id="confirmation" name="confirmation" minlength="8" maxlength="30" required>
+            </div>
+            <a type="button" id="show-password" class=""><img src="/static/img/hide.jpeg" alt=""></a>
+
+            <button type="submit" id="submit" value="">Register</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </div>
+    <script src="/static/register/main_register.js"></script>
+</body>
+</html>

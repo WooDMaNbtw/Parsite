@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/layout/style_layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+<body>
+    <header class="block-1">
+        <div class="header">
+            <div class="info-option user-info">
+                <div class="info-main-user">
+                      {% block info %}
+                      {% endblock %}
+                </div>
+                <div class="account"><a href="/account"><img src="/static/img/user-regular.svg"></a></div>
+            </div>
+
+            <div class="info-option more-info">
+              {% block more_info %}
+                <h2 class="info-text-layout" style="color: #fff; padding-inline: 10px; margin-top: 15px; font-size: 21px;">
+                This system is not created for commercial using but only as an educational and informational example of software.
+                </h2>
+              {% endblock %}
+            </div>
+
+            <div class="info-option authentication">
+                  <a class="login-auth" href="/login">Login</a><div class="vertical-line"></div><a class="logout-auth" href="/logout">Log out</a>
+            </div>
+
+        </div>
+    </header>
+
+    <aside class="block-2">
+        <ul>
+            <li class="option photo"><img src="/static/img/photo_pars.png"></li>
+            <li class="option"><a href="/"><div class="link">Catalog</div></a></li>
+            <li class="option"><a href="/query"><div class="link">Query</div></a></li>
+            <li class="option"><a href="/favorite"><div class="link">Favorite</div></a></li>
+            <li class="option"><a href="/create"><div class="link">Create</div></a></li>
+            <li class="option kontakt">
+                <div class="info">
+                    <div class="mini-container">
+                        <h2 style="position: relative; top: -20px; margin: 0px;">Welcome to Parsite</h2>
+                        <span><b>Made by Nikita Profatilov</b></span><br><br>
+                        <div style="display: flex; justify-content: center; margin-top: 10px;">
+                            <div style="margin-right: 40px;">
+                            <span style="margin-top: 20px;"><b>Github:</b></span><br>
+                            <span><a href="https://github.com/WooDMaNbtw" style="color: #03a5fc; font-size: 17px; margin-top: 10px; text-decoration: underline;" target="_blank">Link</a></span><br>
+                            </div>
+                            <div>
+                                <span style="margin-top: 20px;"><b>Youtube:</b></span><br>
+                                <span><a href="https://www.youtube.com/channel/UCCESGnk89FmtuV41jjTmR0A" style="color: #03a5fc; font-size: 17px; margin-top: 10px; text-decoration: underline;" target="_blank">Link</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="option"><a href="/register"><div class="link">Register</div></a></li>
+        </ul>
+    </aside>
+
+    <main class="block-3">
+        <div class="container">
+          {% block main %}
+          {% endblock %}
+        </div>
+    </main>
+
+</body>
+</html>

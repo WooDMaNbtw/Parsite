@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+    width: 400px;
+    height: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.container h1 {
+     text-align: center;
+     margin: 5px;
+     margin-bottom: 20px;
+}
+
+form .form-option {
+    display: block;
+}
+
+form .form-option label {
+     display: block;
+     margin-bottom: 5px;
+     font-size: 20px;
+}
+
+form .form-option input{
+      width: 400px;
+      height: 40px;
+      margin-bottom: 20px;
+      border: 0;
+      border-bottom: 1px solid #000000;
+      border-radius: 4px;
+      font-size: 20px;
+}
+
+
+form .fullname {
+      display: inline-block;
+      margin-right: 10px;
+}
+
+form .fullname label {
+      display: block;
+      margin-bottom: 5px;
+}
+
+form .fullname input {
+      width: 185px;
+      height: 40px;
+      margin-bottom: 20px;
+      border: 0;
+      border-bottom: 1px solid #000000;
+      border-radius: 4px;
+      font-size: 18px;
+}
+
+form .password {
+      display: inline-block;
+      margin-right: 10px;
+}
+
+form .password input {
+      width: 185px;
+      height: 40px;
+      margin-bottom: 20px;
+      border: 0;
+      border-bottom: 1px solid #000000;
+      border-radius: 4px;
+      font-size: 18px;
+}
+
+.surname,
+.confirmation {
+      position: relative;
+      right: -15px;
+}
+
+
+form #submit {
+      display: block;
+      position: relative;
+      right: -115px;
+      align: center;
+      text-decoration: none;
+      width: 150px;
+      height: 40px;
+      line-height: 20px;
+      border-radius: 10px;
+      border: 2px solid #333;
+      margin: 5px 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #000000;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+      transition: 0.6s;
+      background-color: #fff;
+      top: -15px;
+}
+
+
+form #submit:hover{
+      box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      color: rgb(0, 106, 41);
+      background-color: rgb(255, 255, 255);
+      transform: translateY(-7px);
+      transform: scale(1.03);
+}
+
+.container p {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    bottom: 10px;
+}
+
+.container p a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}
+
+
+body form #show-password img {
+  position: relative;
+  max-width: 35px;
+  cursor: pointer;
+  top: -51px;
+  right: -148px;
+}
+
+body form a {
+  transition: 0.2s;
+  opacity: 0.4;
+}
+
+body form a.active {
+  transition: 0.2s;
+  opacity: 1;
+}
+

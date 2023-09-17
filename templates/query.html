@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Catalog
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/query/style_query.css">
+{% endblock %}
+
+{% block info %}
+    <div class="data fullname">{{ DATA_USER[0].name }} {{ DATA_USER[0].surname }}</div>
+    <div class="data login">Login: {{ DATA_USER[0].login }}</div>
+    <div class="data mail">Email: {{ DATA_USER[0].mail }}</div>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <h2>Search advertisements</h2>
+        <h3>Please enter your query</h3>
+        <div class="query-container">
+            <form action="{{ url_for('query') }}" method="post">
+                <div class="main-option">
+                    <input type="search" class="title title-search" name="title">
+                    <button class="title title-button"><div><img src="/static/img/icons8-search.svg"></div></button>
+                </div>
+                <div class="extra-option">
+                    <div class="row">
+                        <div class="search-price">
+                            <h3>Price(rub):</h3>
+                            <div class="input-price">
+                                <input type="number" class="price min-price" name="min-price" placeholder="from" max="10000000000">
+                                <input type="number" class="price max-price" name="max-price" placeholder="to" max="100000000000">
+                            </div>
+                        </div>
+                        <div class="search-metro">
+                            <h3>Metro:</h3>
+                            <div class="input-metro">
+                            <input class="metro" name="metro" placeholder="Enter the metro station" maxlength="25">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-websites">
+                        <div class="group">
+                            <div class="box box-1">
+                                <input type="checkbox" name="cb" id="cCB1" class="customCheckBoxInput" value="Avito">
+                                <label for="cCB1" class="customCheckBoxWrapper">
+                                    <div class="customCheckBox">
+                                        <div class="inner"><img src="/static/img/Avito.png">Avito</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="box box-2">
+                                <input type="checkbox" name="cb" id="cCB2" class="customCheckBoxInput" value="Domclick">
+                                <label for="cCB2" class="customCheckBoxWrapper">
+                                    <div class="customCheckBox">
+                                        <div class="inner"><img src="/static/img/Domclick.jpg">Domclick</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="box box-3">
+                                <input type="checkbox" name="cb" id="cCB3" class="customCheckBoxInput" value="Cian">
+                                <label for="cCB3" class="customCheckBoxWrapper">
+                                    <div class="customCheckBox">
+                                        <div class="inner"><img src="/static/img/Cian.png">Cian</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

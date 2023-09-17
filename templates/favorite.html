@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Catalog
+{% endblock %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="/static/favorite/style_favorite.css">
+{% endblock %}
+
+{% block info %}
+    <div class="data fullname">{{ DATA_USER[0].name }} {{ DATA_USER[0].surname }}</div>
+    <div class="data login">Login: {{ DATA_USER[0].login }}</div>
+    <div class="data mail">Email: {{ DATA_USER[0].mail }}</div>
+{% endblock %}
+
+{% block main %}
+        <div class="main-container">
+            <div class="items">
+                {% if DATA_INFO %}
+                    {% for item in DATA_INFO %}
+                    <div class="item">
+                        <table class="table-photo">
+                            <tr class="data-row">
+                                <td class="image"><img src="/static/uploads/{{ item.images }}" alt="Фото"></td>
+                            </tr>
+                        </table>
+                        <table class="table-text">
+                            <tr class="main-block">
+                                <td class="title">{{ item.title }}</td>
+                            </tr>
+                            <tr class="main-block">
+                                <td class="price">Price: {{ item.price }}₽</td>
+                            </tr>
+                            <tr class="main-block">
+                                <td class="address">{{ item.address }}</td>
+                            </tr>
+                            <tr class="main-block">
+                                <td class="metro">Metro station: {{ item.metro }}</td>
+                            </tr>
+                            <tr class="main-block">
+                                <td class="description">{{ item.description }}</td>
+                            </tr>
+                            <tr class="main-block">
+                                <td class="link">Phone: {{ item.phone }}</td>
+                            </tr>
+                        </table>
+                        <div class="favorite">
+                                <form method="POST" action="/remove_from_favorites">
+                                    <label class="heart-checkbox">
+                                        <span class="span-fav">&#10084;<button type="submit" id="fav" name="fav" value="{{ item.id }}"></button></span>
+                                    </label>
+                                </form>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="not-found-container">
+                        <h1>Items not found</h1>
+                        <p>You do not have favorite items yet.</p>
+                        <ul>
+                          <li>Double-check the URL for typos</li>
+                          <li>Go back to the <a href="/favorite">Favorite</a> to add items</li>
+                          <li>Contact our support for assistance</li>
+                        </ul>
+                        <div class="circles">
+                            <div class="animation circle-1"></div>
+                            <div class="animation circle-2"></div>
+                            <div class="animation circle-3"></div>
+                            <div class="animation circle-4"></div>
+                            <div class="animation circle-5"></div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <script src="/static/favorite/main_favorite.js"></script>
+{% endblock %}

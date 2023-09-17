@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/query_result/style_query_result.css">
+{% endblock %}
+
+{% block info %}
+    <div class="data fullname">{{ DATA_USER[0].name }} {{ DATA_USER[0].surname }}</div>
+    <div class="data login">Login: {{ DATA_USER[0].login }}</div>
+    <div class="data mail">Email: {{ DATA_USER[0].mail }}</div>
+{% endblock %}
+
+{% block main %}
+<div class="back-block">
+        <a class="back-button" href="{{ url_for('query') }}"><img src="/static/img/arrow-right-solid.svg"><span>Back</span></a>
+</div>
+<div class="main-container">
+    <div class="items">
+        {% if DATA_ITEMS %}
+            {% for item in DATA_ITEMS %}
+                <div class="main-block">
+                    <div class="child-block block-div-1">
+                        <div class="photo-block">
+                            {% if item.image == "Not found" %}
+                                <img src="/static/img/not_found.jpg">
+                            {% else %}
+                                <img src="{{ item.image }}">
+                            {% endif %}
+                        </div>
+                        <div class="text-block">
+                                <div class="info-1">
+                                    {% if item.price == 0 %}
+                                        <div class="td-1 price">Watch on the site</div>
+                                    {% else %}
+                                        <div class="td-1 price">{{ item.price }}₽</div>
+                                    {% endif %}
+                                    <div class="td-1 title">{{ item.title }}</div>
+                                    <div class="td-1 address">адрес: {{ item.address }}</div>
+                                    <div class="td-1 metro">метро: {{ item.metro }}</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="child-block block-div-2">
+                        <div class="desc-block">
+                            <div class="desc" id="description">
+                                {{ item.description[:400] }}...
+                            </div>
+                            <div class="link">
+                                {% if item.website == "avito" %}
+                                    <a class="link-to-main avito" href="{{ item.link }}" target="_blank"><span>{{ item.website|capitalize }}</span><img src="/static/img/arrow-right-solid.svg"></a>
+                                {% elif item.website == "domclick" %}
+                                    <a class="link-to-main domclick" href="{{ item.link }}" target="_blank"><span>{{ item.website|capitalize }}</span><img src="/static/img/arrow-right-solid.svg"></a>
+                                {% elif item.website == "cian" %}
+                                    <a class="link-to-main cian" href="{{ item.link }}" target="_blank"><span>{{ item.website|capitalize }}</span><img src="/static/img/arrow-right-solid.svg"></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="not-found-container">
+                <h1>Not Found</h1>
+                <p>Sorry, the item you are looking for could not be found.</p>
+                <ul>
+                  <li>Double-check the URL for typos</li>
+                  <li>Go back to the <a href="/query">Query</a> to change your request</li>
+                  <li>Contact our support for assistance</li>
+                </ul>
+                <div class="circles">
+                    <div class="animation circle-1"></div>
+                    <div class="animation circle-2"></div>
+                    <div class="animation circle-3"></div>
+                    <div class="animation circle-4"></div>
+                    <div class="animation circle-5"></div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <script>
+        function formatNumberWithSpaces(number) {
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        }
+
+        window.onload = function() {
+            var amountElements = document.getElementsByClassName('price');
+
+                for (var i = 0; i < amountElements.length; i++) {
+                        var amountText = amountElements[i].textContent;
+                        if (amountText != "Watch on the site") {
+                            var amount = parseInt(amountText.replace(/\s/g, ''), 10);  // Удаление пробелов и парсинг числа
+                            var formattedAmount = formatNumberWithSpaces(amount);
+                            amountElements[i].textContent = formattedAmount + " ₽";
+                        }
+                }
+        };
+    </script>
+</div>
+
+{% endblock %}
