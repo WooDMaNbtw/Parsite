@@ -4,7 +4,7 @@
 
 ## Project description
 
-The main idea of this project is to help people find apartments much faster by collecting ads from different websites info one database. To do this, I have created 3 different classes using Python (in "parsing/main.py") for such websites as Avito, Domclick, Cian in which I used Selenium, Beautifulsoup, Requests, Json  libraries, therefore I have parsed relevant information from every page and added key information to database. 
+The main idea of this project is to help people find apartments much faster by collecting ads from different websites into one database. To do this, I have created 3 different classes using Python (in "parsing/main.py") for such websites as Avito, Domclick, Cian in which I used Selenium, Beautifulsoup, Requests, Json  libraries, therefore I have parsed relevant information from every page and added key information to database. 
 
 By using this script all these functions are performed automatically. During the process I faced several problems. For instance, 403 error and defence system, but I was able to fix it, as a result chrome launches not like a software but as a real user. However,  it was really difficult to access to Domclick website, therefore I couldn't have parsed it yet. Once a week table from this database constantly updating. From the user perspective, when the user fill the query form such as filters, he gets relevant information from all 3 websites.
 
